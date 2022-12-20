@@ -482,26 +482,23 @@
             <li class="clients-item">
               <a href="#" class="clients-link"
                 ><svg class="clients-icon" height="50px">
-                  <use
-                    href="./Image/defs.svg#icon-client4"
-                  ></use></svg
-              ></a>
+                  <use href="./Image/defs.svg#icon-client4"></use>
+                </svg>
+              </a>
             </li>
             <li class="clients-item">
               <a href="#" class="clients-link"
                 ><svg class="clients-icon" height="50px">
-                  <use
-                    href="./Image/defs.svg#icon-client5"
-                  ></use></svg
-              ></a>
+                  <use href="./Image/defs.svg#icon-client5"></use>
+                </svg>
+              </a>
             </li>
             <li class="clients-item">
               <a href="#" class="clients-link"
                 ><svg class="clients-icon" height="50px">
-                  <use
-                    href="./Image/defs.svg#icon-client6"
-                  ></use></svg
-              ></a>
+                  <use href="./Image/defs.svg#icon-client6"></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </div>
@@ -569,9 +566,60 @@
     <!-- модальное окно -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button data-modal-close>close</button>
+        <button data-modal-close class="btn-close">
+          <svg width="11px" height="11px">
+            <use href="./Image/defs.svg#icon-close"></use>
+          </svg>
+        </button>
+        <form class="main-form js-speaker-form">
+          <h2 class="modal-title">
+            Залиште свої дані, ми вам передзвонимо
+          </h2>
+          <div class="form-field">
+            <label for="name">Ім'я</label>
+            <input type="text" name="name" id="name" />
+            <svg width="18px" height="18px" class="form-icon">
+              <use href="./Image/form.svg#icon-person"></use>
+            </svg>
+          </div>
+          <div class="form-field">
+            <label for="tel">Телефон</label>
+            <input type="tel" name="tel" id="tel" />
+            <svg width="18px" height="18px" class="form-icon">
+              <use href="./Image/form.svg#icon-phone"></use>
+            </svg>
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" />
+            <svg width="18px" height="18px" class="form-icon">
+              <use href="./Image/form.svg#icon-email"></use>
+            </svg>
+          </div>
+          <div class="form-field">
+            <label for="comment">Коментар</label>
+            <textarea
+              placeholder="Введіть текст"
+              name="comment"
+              id="comment"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+
+          <div class="form-field agreement">
+            <input type="checkbox" id="agreement" name="agreement" />
+            <label for="agreement" class="agreement-text"
+              >Погоджуюся з розсилкою та приймаю
+              <span class="agreement-accent">Умови договору</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn">Відправити</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/form.js"></script>
   </body>
 </html>
