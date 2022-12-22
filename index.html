@@ -105,7 +105,7 @@
             <li class="features-item">
               <div class="features-icon">
                 <svg width="70px" height="70px">
-                  <use href="./Image/defs.svg#icon-antenna"></use>
+                  <use href="./Image/defs.svg#icon-clock"></use>
                 </svg>
               </div>
               <h3 class="features-title">пунктуальність</h3>
@@ -525,9 +525,9 @@
               >
             </address>
           </div>
-
+          <!-- присоединится -->
           <div class="accession">
-            <b class="accession-title">приєднуйтесь</b>
+            <b class="footer-title">приєднуйтесь</b>
             <ul class="social-list">
               <li class="social-item">
                 <a href="#" class="social-link">
@@ -559,6 +559,19 @@
               </li>
             </ul>
           </div>
+
+          <div>
+            <b class="footer-title">Підпишіться на розсилку</b>
+            <form>
+              <div class="footer-mail">
+                <input type="email" placeholder="E-mail" />
+                <button type="submit" class="btn">
+                  Підписатися
+                  <img src="./Image/send.svg" alt="" />
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </footer>
@@ -577,21 +590,39 @@
           </h2>
           <div class="form-field">
             <label for="name">Ім'я</label>
-            <input type="text" name="name" id="name" />
+            <input
+              type="text"
+              name="name"
+              id="name"
+              autocomplete="off"
+              placeholder=" "
+            />
             <svg width="18px" height="18px" class="form-icon">
               <use href="./Image/form.svg#icon-person"></use>
             </svg>
           </div>
           <div class="form-field">
             <label for="tel">Телефон</label>
-            <input type="tel" name="tel" id="tel" />
+            <input
+              type="tel"
+              name="tel"
+              id="tel"
+              autocomplete="off"
+              placeholder=" "
+            />
             <svg width="18px" height="18px" class="form-icon">
               <use href="./Image/form.svg#icon-phone"></use>
             </svg>
           </div>
           <div class="form-field">
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              autocomplete="off"
+              placeholder=" "
+            />
             <svg width="18px" height="18px" class="form-icon">
               <use href="./Image/form.svg#icon-email"></use>
             </svg>
@@ -619,7 +650,5 @@
         </form>
       </div>
     </div>
-    <script src="./js/modal.js"></script>
-    <script src="./js/form.js"></script>
   </body>
 </html>

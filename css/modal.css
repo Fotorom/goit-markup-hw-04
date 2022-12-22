@@ -45,8 +45,8 @@
 }
 .btn-close {
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: -8px;
+  right: -8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,7 +73,7 @@
   width: 100%;
 }
 
-.form-field label {
+.form-field > label {
   margin-bottom: 4px;
   font-weight: 400;
   font-size: 12px;
@@ -82,7 +82,7 @@
   color: var(--main-black-color);
 }
 
-.form-field input {
+.form-field > input {
   margin-bottom: 10px;
   padding-left: 25px;
   height: 40px;
@@ -90,20 +90,30 @@
   border-radius: 4px;
   cursor: pointer;
   outline: none;
+  transition: border 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-
-.form-field input:focus {
-  border-color: var(--accent-color);
-}
-
 .form-icon {
   position: absolute;
   left: 15px;
   bottom: 10px;
   transform: translate(-50%, -50%);
+  transition: transform 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation: rotateWithOrigin 3000ms linear infinite;
 }
-.form-field input:focus + .form-icon {
+.form-field:focus-within > input {
+  border-color: var(--accent-color);
+}
+.form-field:focus-within > label {
+  color: var(--accent-color);
+}
+.form-field:focus-within > svg {
   fill: var(--accent-color);
+  transform: translate(-40px, -50%) scale(1.1);
+
+  transform-origin: bottom center;
+}
+input:not(:placeholder-shown) + svg {
+  transform: translate(-40px, -50%);
 }
 .form-field textarea {
   width: 448px;
@@ -141,3 +151,5 @@
   color: var(--accent-color);
   text-decoration: underline;
 }
+
+/* --------------- */
