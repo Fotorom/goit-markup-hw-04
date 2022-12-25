@@ -147,7 +147,9 @@
 
   margin-bottom: 16px;
 }
-
+.accession {
+  margin-right: 90px;
+}
 /* ------------------------Наши клиенты------------------------ */
 .clients {
   padding: 94px 0px;
